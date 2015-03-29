@@ -17,7 +17,7 @@ The intention of this site is to be used as a boilerplate to the develop of your
 
 ## Installation
 
-1. Clone de project.
+1. Clone the project.
 2. Run composer install.
 3. Run migrations with php artisan migrate.
 4. Run the database seeders with php artisan db:seed.

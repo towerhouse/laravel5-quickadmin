@@ -28,3 +28,41 @@ admin@quickadmin.com / adminadmin
 plain@quickadmin.com / plainuser
 
 6. Take a look by running php -S localhost:7777 inside the public folder.
+
+## Customizations
+
+To customize the sidebar menu, the meta title, and the title on the admin layout go to app/config/site.
+
+Sidebar customization works like this:
+
+* The key of the item is the path as it appears on routing.php.
+* If you want a menu with a submenu you specify type "nested" and add the items keys with the array of subelements. Otherwise type is "simple".
+* Icon is the name of the icon, use the icons on [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/).
+* Name is the name you want as title on the menu.
+* If you specify the property role, then the menu will only display if the user has that role.
+
+<pre>
+'menu_items' => array(
+    '/' => array(
+        'type' => 'simple',
+        'name' => 'Dashboard',
+        'icon' => 'dashboard'
+    ),
+    'users' => array(
+        'type' => 'nested',
+        'name' => 'Users',
+        'icon' => 'user',
+        'role' => 'admin',
+        'items' => array(
+            'users' => array(
+                'name' => 'List',
+                'role' => 'admin',
+            ),
+            'users/edit' => array(
+                'name' => 'Create user',
+                'role' => 'admin',
+            )
+        )
+    )
+)
+</pre>

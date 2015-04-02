@@ -35,7 +35,7 @@ To customize the sidebar menu, the meta title, and the title on the admin layout
 
 Sidebar customization works like this:
 
-* The key of the item is the path as it appears on routing.php.
+* The key of the item is the path as it appears on routing.php without any initial slash.
 * If you want a menu with a submenu you specify type "nested" and add the items keys with the array of subelements. Otherwise type is "simple".
 * Icon is the name of the icon, use the icons on [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/).
 * Name is the name you want as title on the menu.

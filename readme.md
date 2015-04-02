@@ -20,7 +20,7 @@ The intention of this site is to be used as a boilerplate to the develop of your
 1. Clone the project.
 2. Run composer install.
 3. Run migrations with php artisan migrate.
-4. Run the database seeders with php artisan db:seed.
+4. Run the user's database seeders with php artisan db:seed --class=UserTableSeeder
 5. Enter the admin using any of these credentials.
 
 admin@quickadmin.com / adminadmin

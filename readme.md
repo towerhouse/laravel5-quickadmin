@@ -27,7 +27,7 @@ admin@quickadmin.com / adminadmin
 
 plain@quickadmin.com / plainuser
 
-6. Take a look by running php -S localhost:7777 inside the public folder.
+6. Take a look by running php artisan serve on the root of the project.
 
 ## Customizations
 

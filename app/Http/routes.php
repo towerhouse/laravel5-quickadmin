@@ -11,16 +11,13 @@
 |
 */
 
-Route::get('/', 'DashboardController@index');
-Route::get('/home', 'DashboardController@index');
+Route::get('/', array('as' => 'welcome', 'uses' => 'FrontendController@index'));
 
-//Protect actions on the user controller => https://github.com/Zizaco/entrust
-Entrust::routeNeedsRole('users*', 'admin');
-
-Route::get('/users', 'UsersController@index');
-Route::get('/users/edit/{id?}', 'UsersController@edit');
-Route::post('/users', 'UsersController@store');
-Route::post('/users/destroy', 'UsersController@destroy');
+Route::group(array('namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth'), function() {
+  Route::resource('users', 'UsersController');
+  Route::get('/', array('as' => 'home', 'uses' => 'DashboardController@index'));
+  Route::get('dashboard', array('as' => 'dashboard', 'uses' => 'DashboardController@index'));
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

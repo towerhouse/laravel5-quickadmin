@@ -10,7 +10,7 @@ return array(
     '_metas' => array(
         'title' => 'Quick Admin',
     ),
-    
+
     /**
      * Common titles
      */
@@ -18,12 +18,13 @@ return array(
         'title' => 'Quick Admin',
         'footer_title' => 'Silu'
     ),
-    
+
     /**
      * The menu items shown at the menu of the application
      */
     'menu_items' => array(
-        '/' => array(
+        'admin' => array(
+            'home' => true,
             'type' => 'simple',
             'name' => 'Dashboard',
             'icon' => 'dashboard'
@@ -34,15 +35,14 @@ return array(
             'icon' => 'user',
             'role' => 'admin',
             'items' => array(
-                'users' => array(
+                'admin/users' => array(
                     'name' => 'List',
                     'role' => 'admin',
                 ),
-                'users/edit' => array(
+                'admin/users/create' => array(
                     'name' => 'Create user',
                     'role' => 'admin',
                 )
             )
-        )
-    )
-);
+        ),
+));

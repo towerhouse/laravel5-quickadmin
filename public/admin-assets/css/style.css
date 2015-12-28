@@ -2240,4 +2240,33 @@ label {
     min-height: 900px;
 }
 
+/*Admin/Portfolio*/
+#sortable li img {
+    height: 60px;
+    width: 60px;
+    margin-right: 1%
+}
 
+#sortable li i.fa {
+    position: initial;
+}
+
+#sortable li .btn{
+    margin: 3px;   
+}
+
+#sortable li .btn-group .btn {
+    float:none;
+    margin: 0;
+}
+
+#sortable li .btn-group .btn i{
+    position: relative; 
+    left: 0;
+    padding: 0;
+}
+
+#sortable li .btn-container{
+    float: right;
+    margin-right: 5%; 
+}
